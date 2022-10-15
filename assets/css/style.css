@@ -43,7 +43,7 @@ h1,h2,h3,h4,h5{
 
 #text_home{
     height: 500px;
-    margin: 0 200px;
+    margin: 200px 0;
 }
 
 #home p {
