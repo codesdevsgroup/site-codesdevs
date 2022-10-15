@@ -1,0 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+:root{
+    --primary-collor: hsl(255, 65.7%, 52%);
+    --secondary-collor: hsl(0, 0%, 96.1%);
+    background-color: ;
+}
