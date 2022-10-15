@@ -41,6 +41,11 @@ h1,h2,h3,h4,h5{
     text-align: center;
 }
 
+#text_home{
+    height: 500px;
+    margin: 0 200px;
+}
+
 #home p {
     font-family: 'Poppins';
     color: #ffff;
