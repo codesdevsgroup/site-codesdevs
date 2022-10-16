@@ -86,3 +86,9 @@ h1,h2,h3,h4,h5{
     color: #ffff;
     font-family: 'Poppins';
 }
+
+/* MENU */
+
+#menu {
+    background-color: var(--primary-collor);
+}
