@@ -39,6 +39,7 @@ h1,h2,h3,h4,h5{
     animation-name: background_gradient;
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
+    animation-timing-function: ease;
 }
 
 @keyframes background_gradient{
