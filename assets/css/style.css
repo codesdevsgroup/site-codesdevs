@@ -139,14 +139,36 @@ h1,h2,h3,h4,h5{
 }
 
 /* PRODUCTS */
-/* .cards{
-    
-} */
+
 .products_card{
     width: 300px;
+
+}
+
+.products_card p {
+    color: #ffff;
+    text-align: justify;
+}
+
+/* about */
+#about p{
+    color: #ffff;
+}
+
+/* Projects */
+
+/* Team */
+
+/* Media */
+#midias_contact{
+    height: 200px;
+    box-shadow: inset 0 0 1em rgb(49, 49, 48), 1px 0 1em var(--primary-collor);
+    border-radius: 10px;
+}
+
+#midias_contact a{
+    text-decoration: none;
+    color: #FFFFFF;
 }
 
 /* footer */
-#footer{
-    height: 10000px;
-}
