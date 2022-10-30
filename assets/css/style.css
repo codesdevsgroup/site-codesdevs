@@ -102,7 +102,10 @@ p {
 /* -=-=-=-=-=--=-=- home =--=-=-=-=-=-=-=-=-=- */
 
 #home {
-    background: url('../img/Home.svg') no-repeat;
+    background-image: url('../img/Home.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     height: 100vh;
 }
 
