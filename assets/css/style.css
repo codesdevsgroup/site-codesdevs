@@ -37,11 +37,13 @@ ul {
 h1,h2,h3,h4,h5,button {
     font-family: 'Montserrat', sans-serif;
     color: var(--text-color) !important;
+    letter-spacing: 0.1em;
 }
 
 p {
     font-family: 'Inter', sans-serif;
     color: var(--text-color);
+    letter-spacing: 0.1em;
 }
 
 .btn_pattern {
@@ -52,6 +54,21 @@ p {
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.1em;
+}
+
+.btn_pattern:not(.btn_pattern_second):hover {
+    background-color: var(--text-color);
+    color: var(--bg-color) !important;
+}
+
+.btn_pattern_second {
+    border: 3px solid #4845CB !important;
+    background: #4845CB;
+    box-shadow: 0px 4px 64px rgba(72, 69, 203, 0.6);
+}
+
+.btn_pattern_second:hover {
+    box-shadow: 0px 4px 64px #4845CB;
 }
 
 /* -=-=-=-=-=--=-=- navigation =--=-=-=-=-=-=-=-=-=- */
@@ -94,7 +111,6 @@ p {
     font-weight: 500;
     font-size: 44px;
     line-height: 54px;
-    letter-spacing: 0.1em;
 }
 
 #home p {
@@ -114,7 +130,6 @@ p {
 /* -=-=-=-=-=--=-=- banner =--=-=-=-=-=-=-=-=-=- */
 
 #banner {
-    padding: 80px 180px;
     height: 263px;
     background: #4845CB;
 }
@@ -123,7 +138,6 @@ p {
     font-weight: 500;
     font-size: 32px;
     line-height: 39px;
-    letter-spacing: 0.1em;
     margin-bottom: 16px;
 }
 
@@ -131,6 +145,68 @@ p {
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
-    letter-spacing: 0.1em;
+}
+
+#banner div {
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 80px;
+}
+
+/* -=-=-=-=-=--=-=- help =--=-=-=-=-=-=-=-=-=- */
+
+#help {
+    margin-block: 160px;
+}
+
+#help .help_text {
+    padding: 0 80px;
+}
+
+#help .help_text h2 {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 39px;
+    margin-bottom: 15px;
+}
+
+#help .help_text p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 25px;
+}
+
+
+#help .help_cards > div {
+    gap: 21px;
+}
+
+#help .help_card {
+    width: 279px;
+    height: 217px;
+    background-color: var(--color-card);
+    border-radius: 16px;
+    padding: 32px;
+}
+
+#help .help_card svg,
+#help .help_card h5 {
+    margin-bottom: 8px;
+}
+
+#help .help_card h5 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+#help .help_card p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
 }
 
