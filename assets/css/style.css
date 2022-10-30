@@ -54,6 +54,8 @@ p {
     letter-spacing: 0.1em;
 }
 
+/* -=-=-=-=-=--=-=- navigation =--=-=-=-=-=-=-=-=-=- */
+
 #navigation {
     position: absolute;
     height: 106px;
@@ -79,6 +81,8 @@ p {
 #navigation .options_menu .btn_pattern {
     margin-right: 45px;
 }
+
+/* -=-=-=-=-=--=-=- home =--=-=-=-=-=-=-=-=-=- */
 
 #home {
     background: url('../img/Home.svg') no-repeat;
@@ -106,3 +110,27 @@ p {
     align-items: flex-start;
     justify-content: center;
 }
+
+/* -=-=-=-=-=--=-=- banner =--=-=-=-=-=-=-=-=-=- */
+
+#banner {
+    padding: 80px 180px;
+    height: 263px;
+    background: #4845CB;
+}
+
+#banner h2 {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 39px;
+    letter-spacing: 0.1em;
+    margin-bottom: 16px;
+}
+
+#banner p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.1em;
+}
+
