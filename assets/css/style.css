@@ -219,11 +219,6 @@ p {
     margin-bottom: 80px;
 }
 
-#jobs .portfolio {
-    display: flex;
-    column-gap: 32px;
-}
-
 #jobs .portfolio .portfolio_card {
     width: 344px;
     height: 264px;
