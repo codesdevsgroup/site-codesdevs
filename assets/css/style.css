@@ -219,6 +219,30 @@ p {
     margin-bottom: 80px;
 }
 
+#jobs .portfolio{
+    display: flex;
+    flex-direction: column;
+}
+
+#jobs .portfolio .owl-nav {
+    order: 1;
+    margin: 0 auto 80px auto;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 80px;
+    gap: 75px;
+}
+
+#jobs .portfolio .owl-stage-outer {
+    order: 2;
+    margin-bottom: 60px;
+}
+
+#jobs .portfolio .owl-dots {
+    order: 3;
+}
+
 #jobs .portfolio .portfolio_card {
     width: 344px;
     height: 264px;

@@ -1,0 +1,29 @@
+
+@media (min-width: 1400px) {
+  .owl-nav {
+      max-width: 1320px;
+  }
+}
+@media (max-width: 1200px) {
+  .owl-nav  {
+    max-width: 1140px;
+}
+}
+
+@media (max-width: 992px) {
+  .owl-nav {
+    max-width: 960px;
+}
+}
+
+@media (max-width: 768px) {
+  .owl-nav {
+    max-width: 720px;
+}
+}
+
+@media (max-width: 576px) {
+  .owl-nav {
+    max-width: 540px;
+}
+}
