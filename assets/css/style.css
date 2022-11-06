@@ -227,7 +227,9 @@ p {
     padding-right: 80px;
 }
 
-#jobs .portfolio{
+#jobs .portfolio,
+#feedback .feedback,
+#group .group {
     display: flex;
     flex-direction: column;
 }
@@ -272,8 +274,6 @@ p {
 }
 
 #feedback .feedback {
-    display: flex;
-    flex-direction: column;
     margin-top: 80px;
 }
 
@@ -336,6 +336,48 @@ p {
     color: rgba(255, 255, 255, 0.4);
     margin-top: 12px;
     margin-bottom: 0;
+    letter-spacing: 0.1em;
 }
 
+/* -=-=-=-=-=--=-=- Group =--=-=-=-=-=-=-=-=-=- */
+
+#group {
+    margin-bottom: 160px;
+}
+
+#group .owl-stage-outer {
+    margin-bottom: 64px;
+}
+
+#group .owl-nav {
+    margin-bottom: 70px;
+}
+
+#group .partner {
+    width: 156px;
+    height: 197px;
+    padding: 0 8px;
+}
+
+#group .partner img {
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+#group .partner h5 {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0 0 8px 0;
+}
+
+#group .partner span {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;   
+    margin: 0;
+    letter-spacing: 0.1em;
+    color: var(--text-color); 
+}
 
