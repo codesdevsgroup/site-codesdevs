@@ -12,6 +12,9 @@
     --text-color: hsla(0, 0%, 100%, 1);
     --bg-color: hsla(0, 0%, 8%, 1);
     --color-card: hsla(0, 1%, 14%, 1);
+    --text-alternative-color: hsla(0, 0%, 100%, 0.4);
+    --footer-bg: hsla(0, 0%, 15%, 1);
+    --footer-social-icon: hsla(0, 0%, 20%, 1);
 }
 
 html{
@@ -62,14 +65,14 @@ p {
 }
 
 .btn_pattern_second {
-    border: 3px solid #4845CB !important;
-    background: #4845CB;
-    box-shadow: 0px 4px 64px rgba(72, 69, 203, 0.6);
+    border: 3px solid var(--primary-collor) !important;
+    background: var(--primary-collor);
+    box-shadow: 0px 4px 64px hsla(241, 56%, 53%, 0.6);
     padding: 13px 24px;
 }
 
 .btn_pattern_second:hover {
-    box-shadow: 0px 4px 64px #4845CB;
+    box-shadow: 0px 4px 64px var(--primary-collor);
 }
 
 /* -=-=-=-=-=--=-=- navigation =--=-=-=-=-=-=-=-=-=- */
@@ -135,7 +138,7 @@ p {
 
 #banner {
     height: 263px;
-    background: #4845CB;
+    background: var(--primary-collor);
 }
 
 #banner h2 {
@@ -324,7 +327,7 @@ p {
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;
-    color: rgba(255, 255, 255, 0.4) !important;
+    color: var(--text-alternative-color) !important;
     margin-top: 12px;
     margin-bottom: 0;
 }
@@ -334,7 +337,7 @@ p {
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
-    color: rgba(255, 255, 255, 0.4);
+    color: var(--text-alternative-color);
     margin-top: 12px;
     margin-bottom: 0;
     letter-spacing: 0.1em;
@@ -398,3 +401,53 @@ p {
     margin-top: 64px;
 }
 
+/* -=-=-=-=-=--=-=- footer =--=-=-=-=-=-=-=-=-=- */
+
+footer {
+    background-color: var(--footer-bg);
+    padding-block: 80px 64px;
+}
+
+footer h4 {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 0px;
+}
+
+footer .contact p {
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    margin-block: 16px 0;
+}
+
+footer .social li {
+    height: 48px;
+    width: 48px;
+    background-color: var(--footer-social-icon);
+    border-radius: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .site-map li {
+    margin-top: 16px;
+}
+
+footer .site-map li a {
+    text-decoration: none;
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: var(--text-color);
+}
+
+footer .site-map li a:hover {
+    font-size: 18px;
+    color: var(--text-alternative-color);
+}
