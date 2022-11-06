@@ -219,12 +219,20 @@ p {
     margin-bottom: 80px;
 }
 
+#jobs div > h2 {
+    margin-right: 300px;
+}
+
+#jobs div > p {
+    padding-right: 80px;
+}
+
 #jobs .portfolio{
     display: flex;
     flex-direction: column;
 }
 
-#jobs .portfolio .owl-nav {
+.owl-nav {
     order: 1;
     margin: 0 auto 80px auto;
     width: 100%;
@@ -235,11 +243,14 @@ p {
 }
 
 #jobs .portfolio .owl-stage-outer {
-    order: 2;
     margin-bottom: 60px;
 }
 
-#jobs .portfolio .owl-dots {
+.owl-stage-outer {
+    order: 2;
+}
+
+.owl-dots {
     order: 3;
 }
 
@@ -252,3 +263,79 @@ p {
     align-items: center;
     justify-content: center;
 }
+
+
+/* -=-=-=-=-=--=-=- Feedback =--=-=-=-=-=-=-=-=-=- */
+
+#feedback {
+    margin-bottom: 160px;
+}
+
+#feedback .feedback {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+}
+
+#feedback h2 {
+    width: 500px;
+}
+
+#feedback .feedback_element {
+    display: flex;
+}
+
+#feedback .feedback_img_wrapper {
+    width: 312px;
+    height: 312px;
+    padding: 16px 32px 16px 0;
+}
+
+#feedback .feedback_text_wrapper {
+    max-width: 75%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding-right: 80px;
+}
+
+#feedback .owl-nav {
+    position: absolute;
+    top: -160px;
+}
+
+#feedback .owl-dots {
+    padding-left: 305px;
+    align-self: baseline;
+    margin-top: -40px;
+    height: 40px;
+}
+
+#feedback .feedback_text_wrapper h3 {
+    font-size: 28px;
+    line-height: 34px;
+    margin-bottom: 0;
+}
+
+#feedback .feedback_text_wrapper h5 {
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.4) !important;
+    margin-top: 12px;
+    margin-bottom: 0;
+}
+
+#feedback .feedback_text_wrapper span {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: rgba(255, 255, 255, 0.4);
+    margin-top: 12px;
+    margin-bottom: 0;
+}
+
+
