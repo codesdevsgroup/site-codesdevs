@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,225 +16,288 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/menu.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
-
+    <link rel="stylesheet" href="./lib/owlCarousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./lib/owlCarousel/dist/assets/owl.theme.default.min.css">
 </head>
 
 <body>
+    <nav id="navigation">
+        <div class="container">
+            <div class="menu_nav">
+                <a href=""><img src="./assets/img/logo.png" alt=""></a>
+                <div class="options_menu">
+                    <button type="button" class="btn btn_pattern">Orçamento</button>
+                    <div class="icon_menu">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.16675 10H32.5001M15.8334 28.3333H32.5001M10.8334 18.8353H32.5001" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>   
+                </div>
+            </div>
+        </div>
+    </nav>
     <section id="home">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-12" id="text_home">
-                    <h1>Codes Devs</h1>
-                    <h4>Group</h4>
-                    <p class="description">
-                    Desenvolvimento de sites exclusivos e adaptados para sua empresa conquistar novos clientes
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.  
-                    </p> 
-                    <button class="btn_saibamais m-3">Saiba Mais</button>
-                    <button class="btn_orcamento m-3">Contato</button> 
-                </div>
-
-                <div class="col-md-6 col-12" style="margin: auto 0;">
-                    <img class="align-middle img-fluid" src="./assets/img/home.png" alt="">
-                </div>
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Menu Principal -->
-    <nav class="navbar navbar-expand-lg" id="menu">
-        <div class="container">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">       
-            <span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse justify-content-md-end" id="navbarSupportedContent">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="">Index</a></li>
-                    <li class="nav-item"><a class="nav-link" href="">Projetos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="">Sobre</a></li>
-                    <li class="nav-item"><a class="nav-link" href="">Contato</a></li>
-                </ul>
-            </div>
-        </div>        
-    </nav> 
-    
-    <!-- Products -->
-    <section id="products">
-        <div class="container">
-            <div class="row m-5">
-
-                <div class="col-md-4 col-12 d-flex justify-content-around">
-                    <div class="shadow-lg products_card">
-                        <img src="./assets/img/product01.png" alt="">
-                        <h4>
-                        Lorem ipsum dolor sit amet
-                        </h4>
-                        <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                        </p> 
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-12 d-flex justify-content-around">
-                    <div class="shadow-lg products_card  ">
-                        <img src="./assets/img/product01.png" alt="" class="img_product">
-                        <h4>
-                        Lorem ipsum dolor sit amet
-                        </h4>
-                        <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                        </p> 
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-12 d-flex justify-content-around">
-                    <div class="shadow-lg products_card">
-                        <img src="./assets/img/product01.png" alt="">
-                        <h4>
-                        Lorem ipsum dolor sit amet
-                        </h4>
-                        <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                        </p> 
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-12 d-flex justify-content-around">
-                    <div class="shadow-lg products_card">
-                        <img src="./assets/img/product01.png" alt="">
-                        <h4>
-                        Lorem ipsum dolor sit amet
-                        </h4>
-                        <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                        </p> 
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-12 d-flex justify-content-around">
-                    <div class="shadow-lg products_card">
-                        <img src="./assets/img/product01.png" alt="">
-                        <h4>
-                        Lorem ipsum dolor sit amet
-                        </h4>
-                        <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                        </p> 
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-12 d-flex justify-content-around">
-                    <div class="shadow-lg products_card">
-                        <img src="./assets/img/product01.png" alt="">
-                        <h4>
-                        Lorem ipsum dolor sit amet
-                        </h4>
-                        <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                        </p> 
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- About -->
-    <section  id="about">
-        <div class="container" >
-            <div class="row m-5 text-center pt-5">
-                <div class="col-md-6 col-12">
-                    <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </h3>
-
-                    <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, numquam exercitationem! Velit eius
-                    suscipit, consectetur distinctio modi sunt nesciunt, neque animi explicabo, dolorum impedit saepe
-                    assumenda. Sequi incidunt labore hic
-                    </p>
-                </div>
-
-                <div class="col-md-6 col-12">
-                    <img class="img-fluid" src="./assets/img/about.png" alt="">
-                </div>
-               
-            </div>
             
-        </div>
-    </section>
 
-    <!-- PROJECTS -->
-    <section id="projects">
-        <div class="container">
-            <div class="row text-center">
-                 <h2>Projetos</h2>
+            <div class="presentation">
+                <h2>Olá!</h2>
+                <h1>Somos Codes Devs Group</h1>
+                <h2>Sistemas Inteligentes</h2>
+                <p>
+                    Tiramos seu projeto do papel, uma das software house mais completa do mercado, conte com um grupo de desenvolvedores de códigos eficientes, ajudamos desde designer a sites, sistemas, aplicativos e mais.
+                </p>
+                <button type="button" class="btn btn_pattern">Saiba mais</button>
             </div>
         </div>
-       
     </section>
-
-    <!-- Nossa Equipe -->
-    <section id="team">
+    <section id="banner">
         <div class="container">
-            <div class="row text-center p-5">
-                <h3>Equipe</h3>
-            </div>
+                <h2>Oferecemos muito mais que desenvolvimento de site.</h2>
+                <p>
+                    Construímos projetos exclusivos, planejados por profissionais para atender suas necessidades, colocando em prática as melhores soluções.
+                </p>
         </div>
-        
     </section>
 
-    <!-- Contact -->
-    <section id="contact">
-        <div class="container text-center ">
+    <section id="help">
+        <div class="container">
             <div class="row">
-
-                <h3 class="title_contact">Nossas Mídias</h3>
-                
-                <div class="shadow-lg" id="midias_contact">
-                    
-                    <div class=" d-flex m-2 ">
-                        <img class="m-1" src="./assets/img/telephone_icon.png" alt="">
-                        (99) 99999-9999
-                    </div>
-
-                    <div class=" d-flex m-2">
-                        <img class="m-1"  src="./assets/img/git_icon.png" alt="">
-                    <a href="https://github.com/codesdevsgroup">git:codesdevsgroup</a> 
-                    </div>
-
-                    <div class=" d-flex m-2">
-                        <img class="m-1"  src="./assets/img/instagram_icon.png" alt="">
-                        <a href="https://www.instagram.com/codesdevsgroup/">@codesdevsgroup</a>
-                    </div>
-                    
-                    <div class=" d-flex m-2">
-                        <img class="m-1"  src="./assets/img/email_icon.png" alt="">
-                        <a href="">atendimento@codesdevs.com</a>
+                <div class="col-12 col-md-6 help_text">
+                    <h2>Veja como podemos ajudar</h2>
+                    <p>
+                        Entenda o que componhe os processos de Desenvolvimentos de Site e Sistemas na Codes Devs:
+                    </p>
+                    <button type="button" class="btn btn_pattern btn_pattern_second">Quero um projeto!</button>
+                </div>
+                <div class="col-12 col-md-6 help_cards">
+                    <div class="row">
+                        <div class="help_card">
+                            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M37.3334 39.6667H15.1667M49.0001 21V9.375C49.0001 8.06332 47.9368 7 46.6251 7H7.04175C5.73007 7 4.66675 8.06332 4.66675 9.375V35M49.0001 21H51.2917C52.6034 21 53.6667 22.0633 53.6667 23.375V45.5M49.0001 21H39.7084C38.3967 21 37.3334 22.0633 37.3334 23.375V35M37.3334 45.5V49M37.3334 45.5V35M37.3334 45.5H45.5001H53.6667M53.6667 45.5V48.9583C53.6667 50.27 52.6034 51.3333 51.2917 51.3333H39.6667C38.3781 51.3333 37.3334 50.2887 37.3334 49V49M4.66675 35V37.2917C4.66675 38.6033 5.73007 39.6667 7.04175 39.6667H15.1667M4.66675 35H37.3334M15.1667 39.6667L12.8701 45.7911C12.2878 47.3437 13.4356 49 15.0939 49H37.3334" stroke="white" stroke-width="2"/>
+                                <circle cx="45.4999" cy="47.8334" r="1.16667" fill="#FCF8F8"/>
+                            </svg>
+                            <h5>Site Responsivo</h5>
+                            <p>
+                                Seu site é preparado para dispositivos móveis e web.
+                            </p>
+                        </div>
+    
+                        <div class="help_card">
+                            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.5151 32.1481L23.6587 35.5244C24.8046 36.4581 24.8046 38.2085 23.6587 39.1422L19.5151 42.5185M46.2423 49V39.9259M46.2423 39.9259L41.1514 42.5185M46.2423 39.9259L51.3333 42.5185M38.9999 32.6666H46.6666C47.9552 32.6666 48.9999 31.622 48.9999 30.3333V17.1111M48.9999 17.1111V11.6666C48.9999 10.378 47.9552 9.33331 46.6666 9.33331H16.3333C15.0446 9.33331 13.9999 10.378 13.9999 11.6666V17.1111M48.9999 17.1111H13.9999M13.9999 22.2963V17.1111M9.33325 28V46.6666C9.33325 47.9553 10.3779 49 11.6666 49H32.4545C33.7431 49 34.7878 47.9553 34.7878 46.6666V28C34.7878 26.7113 33.7431 25.6666 32.4545 25.6666H11.6666C10.3779 25.6666 9.33325 26.7113 9.33325 28Z" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                            </svg>   
+                            <h5>Projeto Exclusivo</h5>
+                            <p>
+                                Design e programação feitos unicamente para você.
+                            </p>
+                        </div>
+    
+                        <div class="help_card">
+                            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M23.3333 13.6316H9.21053C7.98969 13.6316 7 14.6213 7 15.8421V22.4737M49 34.6316V46.7895C49 48.0103 48.0103 49 46.7895 49H9.21053C7.98969 49 7 48.0103 7 46.7895V22.4737M7 22.4737H22.1667M22.1667 31.3158L17.5 35.7368L21 39.0526M29.1667 31.3158L26.8333 40.1579M32.6667 31.3158L37.3333 35.7368L32.6667 40.1579M43.4737 25.7895L49 31.3158M46.7895 16.9474C46.7895 22.4411 42.3359 26.8947 36.8421 26.8947C31.3483 26.8947 26.8947 22.4411 26.8947 16.9474C26.8947 11.4536 31.3483 7 36.8421 7C42.3359 7 46.7895 11.4536 46.7895 16.9474Z" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            <h5>Otimização SEO</h5>
+                            <p>
+                                Seu site entre os primeiros nos mecanismos de busca.
+                            </p>
+                        </div>
+    
+                        <div class="help_card">
+                            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14 14H8C7.44772 14 7 14.4477 7 15V38.6666C7 39.2189 7.44772 39.6666 8 39.6666H14M14 14V39.6666M14 14V10.3333C14 9.78103 14.4477 9.33331 15 9.33331H35.1667C35.719 9.33331 36.1667 9.78103 36.1667 10.3333V14M14 39.6666V41C14 41.5523 14.4477 42 15 42H30.3333M36.1667 14V32.6666M36.1667 14H42.1667C42.719 14 43.1667 14.4477 43.1667 15V36.1666M19.8333 30.3333H24.5M18.6667 24.5H30.3333M18.6667 18.6666H31.5M41.4167 45.5L37.3333 49L32.6667 37.3333L45.5 42L41.4167 45.5ZM41.4167 45.5L44.3333 49" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                            </svg>                                
+                            <h5>Cross-browser</h5>
+                            <p>
+                                Seus site funcionando em qualquer navegador.
+                            </p>
+                        </div>
                     </div>
                 </div>
-                
-        </div>
             </div>
-                
-        
-    </section>
-
-    <!-- COPYRIGHT -->
-    <section id="copyright">
-        <div>
-            <span>&copy Todos Direitos Reservados Codes Devs Group </span>
         </div>
     </section>
 
+    <section id="jobs">
+        <div class="container">
+            <div class="d-flex flex-row">
+                <h2>Conheça nosso trabalho</h2>
+                <p>
+                    Confira os projetos  feitos exclusivamente para empresas dos nossos clientes.
+                </p>
+            </div>
+        </div>
+        
+        <div class="owl-carousel owl-theme portfolio">
+            <div class="item portfolio_card">
+                <div class="portfolio_card_pattern">
+                    <img src="./assets/img/petyk-logo.jpg" alt="">
+                </div>
+            </div>
 
+            <div class="item portfolio_card">
+                <div class="portfolio_card_pattern">
+                    <img src="./assets/img/mensurar-logo.jpg" alt="">
+                </div>
+            </div>
 
+            <div class="item portfolio_card">
+                <div class="portfolio_card_pattern">
+                    <img src="./assets/img/lemos-contabilidade-logo.jpg" alt="">
+                </div>
+            </div>
 
+            <div class="item portfolio_card">
+                <div class="portfolio_card_pattern">
+                    <img src="" alt="">
+                </div>
+            </div>
 
+            <div class="item portfolio_card">
+                <div class="portfolio_card_pattern">
+                    <img src="" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section id="feedback">
+        
+        <div class="container">
+            <h2>O que nos clientes dizem sobre nós</h2>
+            <div class="owl-carousel owl-theme feedback">
+                <div class="item feedback_element">
+                    <div class="feedback_img_wrapper">
+                        <img src="./assets/img/perfil-feedback1.png" alt="">
+                    </div>
+                    <div class="feedback_text_wrapper">
+                        <h3>
+                        "Não poderia ter ficado mais feliz com o resultado, entenderam nossas necessidades e entregaram mais do sonhamos."
+                        </h3>
+                        <h5>Carlos Silva</h5>
+                        <span>Seo de BM</span>
+                    </div>
+                </div>
+    
+                <div class="item feedback_element">
+                    <div class="feedback_img_wrapper">
+                        <img src="./assets/img/perfil-feedback1.png" alt="">
+                    </div>
+                    <div class="feedback_text_wrapper">
+                        <h3>
+                            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic fugit itaque consectetur excepturi ab facere rerum nulla repellendus, esse iste sed labore, officia, impedit sint expedita officiis dolor modi deleniti."
+                        </h3>
+                        <h5>John Doe</h5>
+                        <span>CEO de JM</span>
+                    </div>
+                </div>
+    
+                <div class="item feedback_element">
+                    <div class="feedback_img_wrapper">
+                        <img src="./assets/img/perfil-feedback1.png" alt="">
+                    </div>
+                    <div class="feedback_text_wrapper">
+                        <h3>
+                            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic fugit itaque consectetur excepturi ab facere rerum nulla repellendus, esse iste sed labore, officia, impedit sint expedita."
+                        </h3>
+                        <h5>Fulano da Silva</h5>
+                        <span>CTO da Google</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="group">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 align-self-center">
+                    <h2>Nossa equipe <br> de desenvolvimento</h2>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="owl-carousel owl-theme group">
+                        <div class="item group_element">
+                            <div class="partner d-flex flex-column align-items-center">
+                                <img src="./assets/img/perfil-group1.png" alt="">
+                                <h5>Fabiano</h5>
+                                <span>Progamador</span>
+                            </div>
+                        </div>
+            
+                        <div class="item group_element">
+                            <div class="partner d-flex flex-column align-items-center">
+                                <img src="./assets/img/perfil-group2.png" alt="">
+                                <h5>Lucas</h5>
+                                <span>Progamador</span>
+                            </div>
+                        </div>
+            
+                        <div class="item group_element">
+                            <div class="partner d-flex flex-column align-items-center">
+                                <img src="./assets/img/perfil-group3.png" alt="">
+                                <h5>Alef</h5>
+                                <span>Progamador</span>
+                            </div>
+                        </div>
+
+                        <div class="item group_element">
+                            <div class="partner d-flex flex-column align-items-center">
+                                <img src="./assets/img/perfil-group3.png" alt="">
+                                <h5>Lorrainy</h5>
+                                <span>Designer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="banner2">
+        <div class="container text-center">
+            <h2>Interessado em fazer um site com a gente?</h2>
+            <h2>Vamos conversar!</h2>
+            <button type="button" class="btn btn_pattern btn_pattern_second">iniciar projeto!</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-12 contact">
+                    <h4>Entre em contato</h4>
+                    <p>Telefone: (99) 99999-9999</p>
+                    <p>Email: email@email.com</p>
+                    <img src="./assets/img/logo.webp" alt="">
+                </div>
+
+                <div class="col-md-4 col-12 social">
+                    <h4>Rede sociais</h4>
+                    <ul class="d-flex ps-0 mt-3">
+                        <li class="me-3"><img src="./assets/img/logo_instagram.png" alt=""></li>
+                        <li class="me-3"><img src="./assets/img/logo_facebook.png" alt=""></li>
+                        <li class="me-3"><img src="./assets/img/logo_linkedin.png" alt=""></li>
+                        <li class="me-3"><img src="./assets/img/logo_github.png" alt=""></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 col-12 site-map">
+                    <h4>Guia de Navegação</h4>
+                    <ul class="ps-0">
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#help">Serviços</a></li>
+                        <li><a href="#jobs">Portfólio</a></li>
+                        <li><a href="#feedback">Clientes</a></li>
+                        <li><a href="#group">Colaboradores</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
@@ -243,6 +305,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
+
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./lib/owlCarousel/dist/owl.carousel.min.js"></script>
 
 </body>
 
