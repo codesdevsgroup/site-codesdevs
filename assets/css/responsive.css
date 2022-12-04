@@ -27,3 +27,13 @@
     max-width: 540px;
 }
 }
+
+
+@media screen and (min-width: 577px) and (max-width: 1400px) {
+  #help .help_cards > div {
+    gap: 12px;
+  }
+  .owl-carousel.owl-drag .owl-item {
+    margin: 10px;
+  }
+}
