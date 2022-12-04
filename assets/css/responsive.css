@@ -37,3 +37,28 @@
     margin: 10px;
   }
 }
+
+/** Mobile **/
+@media (max-width: 576px) {
+  #home {
+    height: 85vh;
+  }  
+  #home .presentation {
+    padding: 0px;
+  }
+  #banner {
+    height: 400px;
+  }
+
+  #help {
+    margin-block: 100px;
+  }
+  #help .help_text {
+    padding-bottom: 50px;
+  }
+
+  #help .help_card {
+    width: 250px;
+    height: 250px;
+  }
+}
