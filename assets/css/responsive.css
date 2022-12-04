@@ -61,4 +61,19 @@
     width: 250px;
     height: 250px;
   }
+
+  #jobs div > h2 {
+    margin-right: 0;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.1em;
+  }
+  #jobs div > p {
+    padding: 50px;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.1em;
+  }
 }
