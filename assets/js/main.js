@@ -84,5 +84,5 @@ $(document).ready(function(){
     autoplayHoverPause: true
   });
 
-  $(".owl-nav").addClass("contaner")
+  $(".owl-nav").addClass("container")
 });
