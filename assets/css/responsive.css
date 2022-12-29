@@ -76,30 +76,4 @@
     text-align: center;
     letter-spacing: 0.1em;
   }
-
-  .owl-nav {
-    justify-content: space-between;
-    padding-inline: 20px;
-    position: absolute;
-  }
-
-  .owl-nav svg {
-    width: 10px;
-    height: 18px;
-  }
-
-  .owl-nav path {
-    stroke-width: 4px;
-  }
-
-  #jobs .portfolio .portfolio_card {
-    height: 210px;
-    width: 280px;
-  }
-
-  .owl-carousel .owl-item {
-    display: flex;
-    justify-content: center;
-  }
 }
-
