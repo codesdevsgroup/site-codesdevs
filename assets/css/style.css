@@ -231,12 +231,6 @@ p {
     padding-right: 80px;
 }
 
-#jobs .portfolio,
-#feedback .feedback,
-#group .group {
-    display: flex;
-    flex-direction: column;
-}
 
 
 /* -=-=-=-=-=--=-=- Feedback =--=-=-=-=-=-=-=-=-=- */
