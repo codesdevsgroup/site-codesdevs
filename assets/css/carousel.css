@@ -48,8 +48,8 @@ transform: translateX(0);
 }
 
 #jobs .carousel-item .card {
-    background: red;
-    padding: 50px;
+    padding: 20px;
+    background: transparent !important;
 }
 
 .jobsButton {
