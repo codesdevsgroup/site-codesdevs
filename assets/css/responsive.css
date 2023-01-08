@@ -54,11 +54,18 @@
     height: 400px;
   }
 
+  #banner div {
+    padding: 80px 0px;
+
+  }
+
   #help {
-    margin-block: 100px;
+    margin-block: 20px;
   }
   #help .help_text {
-    padding-bottom: 50px;
+    padding-bottom: 10px;
+    text-align: center;
+    padding: 80px 10px;
   }
 
   #help .help_card {
