@@ -40,12 +40,16 @@
 
 /** Mobile **/
 @media (max-width: 576px) {
-  #home {
-    height: 85vh;
-  }  
   #home .presentation {
-    padding: 0px;
+    height: 1000px;
+    display: flex;
+    padding-right: 40px;
   }
+
+  #home p {
+    font-size: 22px;
+  }
+  
   #banner {
     height: 400px;
   }
