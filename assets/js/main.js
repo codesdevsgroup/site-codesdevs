@@ -25,8 +25,8 @@ $(document).ready(function(){
       1024: {
         items: 3
       },
-      1270: {
-        items: 4
+      1280: {
+        items: 3
       }
     },
     autoplayHoverPause: true
