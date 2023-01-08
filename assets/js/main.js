@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 $(document).ready(function(){
   $(".owl-carousel.portfolio").owlCarousel({
     items: 4,
@@ -86,6 +84,5 @@ $(document).ready(function(){
     autoplayHoverPause: true
   });
 
-  $(".owl-nav").addClass("contaner")
+  $(".owl-nav").addClass("container")
 });
->>>>>>> parent of 731aff8 (add owl carousel responsive)

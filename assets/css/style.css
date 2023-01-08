@@ -238,6 +238,38 @@ p {
     flex-direction: column;
 }
 
+.owl-nav {
+    order: 1;
+    margin: 0 auto 80px auto;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 80px;
+    gap: 75px;
+}
+
+#jobs .portfolio .owl-stage-outer {
+    margin-bottom: 60px;
+}
+
+.owl-stage-outer {
+    order: 2;
+}
+
+.owl-dots {
+    order: 3;
+}
+
+#jobs .portfolio .portfolio_card {
+    width: 344px;
+    height: 264px;
+    background-color: var(--text-color);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 /* -=-=-=-=-=--=-=- Feedback =--=-=-=-=-=-=-=-=-=- */
 
