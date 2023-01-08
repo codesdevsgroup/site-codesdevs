@@ -28,14 +28,12 @@ html,body{
 
 body{
     background: var(--bg-color);
-
-
     overflow: overlay;
 }
 
 ul {
     list-style: none;
-  }
+}
 
 h1,h2,h3,h4,h5,button {
     font-family: 'Montserrat', sans-serif;
@@ -135,6 +133,10 @@ p {
 }
 
 /* -=-=-=-=-=--=-=- banner =--=-=-=-=-=-=-=-=-=- */
+
+#logo {
+    width: 40%;
+}
 
 #banner {
     height: 263px;
