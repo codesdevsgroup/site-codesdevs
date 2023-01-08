@@ -41,7 +41,7 @@
 /** Mobile **/
 @media (max-width: 576px) {
   #home .presentation {
-    height: 1000px;
+    height: 90vh;
     display: flex;
     padding-right: 40px;
   }
