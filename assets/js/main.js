@@ -11,7 +11,6 @@ $(document).ready(function(){
       <svg width="28" height="44" viewBox="0 0 28 44" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1.62632 1L25.5 21.7789L1.62632 43" stroke="white" stroke-width="2"/>
       </svg>
-
     `],
     autoplay: true,
     autoplayTimeout: 3000,
@@ -44,7 +43,6 @@ $(document).ready(function(){
       <svg width="28" height="44" viewBox="0 0 28 44" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1.62632 1L25.5 21.7789L1.62632 43" stroke="white" stroke-width="2"/>
       </svg>
-
     `],
     autoplay: false,
     autoplayTimeout: 3000,
@@ -63,7 +61,6 @@ $(document).ready(function(){
       <svg width="28" height="44" viewBox="0 0 28 44" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1.62632 1L25.5 21.7789L1.62632 43" stroke="white" stroke-width="2"/>
       </svg>
-
     `],
     autoplay: false,
     responsive: {
