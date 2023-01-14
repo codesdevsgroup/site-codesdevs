@@ -45,13 +45,20 @@
     display: flex;
     padding-right: 40px;
   }
-
+  #home h1,
+  #home h2 {
+    font-size: 34px;
+    line-height: 34px;
+  }
+  
   #home p {
-    font-size: 22px;
+    font-size: 20px;
   }
   
   #banner {
     height: 400px;
+    padding-inline-start: 13px;
+    text-align: center;
   }
 
   #banner div {
@@ -117,8 +124,4 @@
     display: flex;
     justify-content: center;
   }
-}
-
-@media screen {
-  
 }
