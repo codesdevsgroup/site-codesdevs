@@ -1,314 +1,718 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="./assets/img/icon.png">
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <meta name="keywords" content="Codes Devs Group">
-    <meta name="descriptions" content="Codes Devs Group">
-    <title>Codes Devs Group</title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.png" />
 
-    <!-- CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/menu.css">
-    <link rel="stylesheet" href="./lib/owlCarousel/dist/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="./lib/owlCarousel/dist/assets/owl.theme.default.min.css">
-    <link rel="stylesheet" href="./assets/css/responsive.css">
-    
-</head>
+    <title>Codes Devs</title>
 
-<body>
-    <nav id="navigation">
-        <div class="container">
-            <div class="menu_nav">
-                <a href=""><img id="logo" src="./assets/img/logo.png" alt=""></a>
-                <div class="options_menu">
-                    <button type="button" class="btn btn_pattern">Orçamento</button>
-                    <div class="icon_menu">
-                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4.16675 10H32.5001M15.8334 28.3333H32.5001M10.8334 18.8353H32.5001" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                    </div>   
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <script src="./assets/js/alpine.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.cdnfonts.com/css/coolvetica-2" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="./assets/css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/css/bootstrap-custom.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/css/style.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body id="main-body">
+    <div id="layout">
+      <header
+        id="navigation"
+        x-data="{ sticky: false }"
+        :class="{'sticky': sticky}"
+      >
+        <nav
+          class="d-flex container justify-content-between align-items-center position-relative"
+        >
+          <a href="#home">
+            <img
+              src="assets/img/logo.svg"
+              alt="logo codes devs"
+              class="img-fluid logo"
+            />
+            <img
+              src="assets/img/logo-white.svg"
+              alt="logo codes devs"
+              class="img-fluid logo-white"
+            />
+          </a>
+          <div class="d-flex">
+            <ul class="d-flex nav-list mar-e-5">
+              <li><a href="#home" class="active home">Início</a></li>
+              <li><a href="#services" class="services">Serviços</a></li>
+              <li><a href="#portfolio" class="portfolio">Portfólio</a></li>
+              <li><a href="#banner" class="contact">Contato</a></li>
+            </ul>
+            <div class="options d-flex align-items-center">
+              <div class="dark-mode-select desktop">
+                <button
+                  class="button-light"
+                  onclick="changeBackground('light')"
+                >
+                  <img
+                    src="./assets/img/icon-light.svg"
+                    alt="icone layout light"
+                  />
+                </button>
+                <button class="button-dark" onclick="changeBackground('dark')">
+                  <img
+                    src="./assets/img/icon-dark.svg"
+                    alt="icone layout dark"
+                  />
+                </button>
+              </div>
+              <div class="mobile-options" x-data="{ open: false }">
+                <svg
+                  x-on:click="open = true"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M2.25 7C2.25 6.58579 2.58579 6.25 3 6.25H21C21.4142 6.25 21.75 6.58579 21.75 7C21.75 7.41421 21.4142 7.75 21 7.75H3C2.58579 7.75 2.25 7.41421 2.25 7ZM6 12C6 11.5858 6.33579 11.25 6.75 11.25H21C21.4142 11.25 21.75 11.5858 21.75 12C21.75 12.4142 21.4142 12.75 21 12.75H6.75C6.33579 12.75 6 12.4142 6 12ZM2.25 17C2.25 16.5858 2.58579 16.25 3 16.25H21C21.4142 16.25 21.75 16.5858 21.75 17C21.75 17.4142 21.4142 17.75 21 17.75H3C2.58579 17.75 2.25 17.4142 2.25 17Z"
+                    fill="white"
+                  />
+                </svg>
+                <div class="nav-list-mobile" :class="{'open': open}">
+                  <div class="nav-list-mobile-header">
+                    <div class="dark-mode-select">
+                      <button
+                        class="button-light"
+                        onclick="changeBackground('light')"
+                      >
+                        <img
+                          src="./assets/img/icon-light.svg"
+                          alt="icone layout light"
+                        />
+                      </button>
+                      <button
+                        class="button-dark"
+                        onclick="changeBackground('dark')"
+                      >
+                        <img
+                          src="./assets/img/icon-dark.svg"
+                          alt="icone layout dark"
+                        />
+                      </button>
+                    </div>
+                    <svg
+                      x-on:click="open = false"
+                      width="17"
+                      height="17"
+                      viewBox="0 0 17 17"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 15.7431L15.7431 1M15.7431 15.7431L1 1"
+                        stroke="white"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <ul class="d-flex flex-column nav-list-mobile-body">
+                    <li><a href="#home" class="active home">Início</a></li>
+                    <li><a href="#services" class="services">Serviços</a></li>
+                    <li>
+                      <a href="#portfolio" class="portfolio">Portfólio</a>
+                    </li>
+                    <li><a href="#banner" class="contact">Contato</a></li>
+                  </ul>
                 </div>
+              </div>
             </div>
-        </div>
-    </nav>
-    <section id="home">
-        <div class="container">
-            <div class="presentation">
-                <h2>Olá!</h2>
-                <h1>Somos Codes Devs Group</h1>
-                <h2>Desenvolvemos Sistemas Inteligentes</h2>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <section id="home">
+          <div class="container">
+            <div class="texts">
+              <h1>
+                Você está
+                <span class="box">
+                  <img src="assets/img/box.png" alt="" />
+                  perdendo
+                </span>
+                <br />
+                <span class="lines">
+                  <img src="assets/img/lines-1.png" alt="" />
+                  clientes
+                </span>
+                para o seu
+                <br />
+                concorrente:
+              </h1>
+              <p>
+                Fortaleça sua presença online <br />
+                e atraia seu público.
+              </p>
+              <a
+                href="https://api.whatsapp.com/send?phone=553391448945&text=Ol%C3%A1%2C%20vi%20seu%20site%20e%20quero%20vender%20mais!"
+                target="_blank"
+              >
+                <button class="btn btn-blue">
+                  Quero vender mais
+                  <svg
+                    width="35"
+                    height="13"
+                    viewBox="0 0 35 13"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="mar-s-3"
+                  >
+                    <path
+                      d="M1 5.75C0.585786 5.75 0.25 6.08579 0.25 6.5C0.25 6.91421 0.585786 7.25 1 7.25V5.75ZM34.5341 7.03033C34.827 6.73744 34.827 6.26256 34.5341 5.96967L29.7611 1.1967C29.4683 0.903806 28.9934 0.903806 28.7005 1.1967C28.4076 1.48959 28.4076 1.96447 28.7005 2.25736L32.9431 6.5L28.7005 10.7426C28.4076 11.0355 28.4076 11.5104 28.7005 11.8033C28.9934 12.0962 29.4683 12.0962 29.7611 11.8033L34.5341 7.03033ZM1 7.25H34.0038V5.75H1V7.25Z"
+                      fill="white"
+                    />
+                  </svg>
+                </button>
+              </a>
+            </div>
+            <img src="assets/img/home-image.png" class="img-fluid" alt="" />
+          </div>
+        </section>
+        <section id="services">
+          <section id="our-services">
+            <div class="container">
+              <div class="title">
+                <h2>
+                  Conheça os nossos <br />
+                  serviços:
+                </h2>
                 <p>
-                    Somos uma software house completa, tiramos seu site do papel e proporcionamos uma excelente experiência para o seu cliente.
+                  Na Codes, não só entregamos um bom design, mas também um site
+                  funcional e atrativo para o seu público.
                 </p>
-                <button type="button" class="btn btn_pattern">Saiba mais</button>
+              </div>
+              <div class="cards">
+                <div class="custom-card">
+                  <svg
+                    width="88"
+                    height="70"
+                    viewBox="0 0 88 70"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15.4165 29.9167L24.7499 15.9167M15.4165 29.9167H43.4165M15.4165 29.9167L43.4165 67.25M24.7499 15.9167L43.4165 29.9167M24.7499 15.9167H43.7082M62.6665 15.9167L71.4165 29.9167M62.6665 15.9167L43.4165 29.9167M62.6665 15.9167H43.7082M71.4165 29.9167H43.4165M71.4165 29.9167L43.4165 67.25M43.4165 29.9167V67.25M43.4165 29.9167L43.7082 15.9167M1.99988 31.6667H8.99988M15.4165 6.58333L20.6665 11.8333M43.7082 2.5V10.0833M73.1665 6.58333L68.4999 11.8333M78.9999 31.6667H85.9999"
+                      stroke="#3F3F3F"
+                      stroke-width="3.16981"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                  <h5>Planejamento</h5>
+                  <p>Pesquisamos sobre seu negócios e mercado.</p>
+                </div>
+                <div class="custom-card">
+                  <svg
+                    width="88"
+                    height="70"
+                    viewBox="0 0 88 70"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15.4165 29.9167L24.7499 15.9167M15.4165 29.9167H43.4165M15.4165 29.9167L43.4165 67.25M24.7499 15.9167L43.4165 29.9167M24.7499 15.9167H43.7082M62.6665 15.9167L71.4165 29.9167M62.6665 15.9167L43.4165 29.9167M62.6665 15.9167H43.7082M71.4165 29.9167H43.4165M71.4165 29.9167L43.4165 67.25M43.4165 29.9167V67.25M43.4165 29.9167L43.7082 15.9167M1.99988 31.6667H8.99988M15.4165 6.58333L20.6665 11.8333M43.7082 2.5V10.0833M73.1665 6.58333L68.4999 11.8333M78.9999 31.6667H85.9999"
+                      stroke="#3F3F3F"
+                      stroke-width="3.16981"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                  <h5>Design</h5>
+                  <p>Projeto compatível com a imagem da sua empresa</p>
+                </div>
+                <div class="custom-card">
+                  <svg
+                    width="88"
+                    height="70"
+                    viewBox="0 0 88 70"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15.4165 29.9167L24.7499 15.9167M15.4165 29.9167H43.4165M15.4165 29.9167L43.4165 67.25M24.7499 15.9167L43.4165 29.9167M24.7499 15.9167H43.7082M62.6665 15.9167L71.4165 29.9167M62.6665 15.9167L43.4165 29.9167M62.6665 15.9167H43.7082M71.4165 29.9167H43.4165M71.4165 29.9167L43.4165 67.25M43.4165 29.9167V67.25M43.4165 29.9167L43.7082 15.9167M1.99988 31.6667H8.99988M15.4165 6.58333L20.6665 11.8333M43.7082 2.5V10.0833M73.1665 6.58333L68.4999 11.8333M78.9999 31.6667H85.9999"
+                      stroke="#3F3F3F"
+                      stroke-width="3.16981"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                  <h5>Desenvolvimento</h5>
+                  <p>Codificamos para todos os tipos de dispositivos.</p>
+                </div>
+              </div>
             </div>
-        </div>
-    </section>
-    <section id="banner">
+          </section>
+          <section id="differs">
+            <div class="container">
+              <div class="d-flex justify-content-between">
+                <div class="image">
+                  <img src="assets/img/img-50.png" alt="" />
+                </div>
+                <div class="texts">
+                  <h4>
+                    Ter um site de qualidade pode ser
+                    <br />
+                    o seu diferencial.
+                  </h4>
+                  <p>
+                    De acordo com a pesquisa do Top Design Firms, metade dos
+                    usuários considera que um bom design é um fator decisivo na
+                    hora de fazer uma compra ou contração.
+                  </p>
+                  <a
+                    href="https://api.whatsapp.com/send?phone=553391448945&text=Ol%C3%A1%2C%20vi%20seu%20site%20e%20quero%20vender%20mais!"
+                    target="_blank"
+                  >
+                    <button class="btn btn-blue">
+                      Quero vender mais
+                      <svg
+                        width="35"
+                        height="13"
+                        viewBox="0 0 35 13"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="mar-s-3"
+                      >
+                        <path
+                          d="M1 5.75C0.585786 5.75 0.25 6.08579 0.25 6.5C0.25 6.91421 0.585786 7.25 1 7.25V5.75ZM34.5341 7.03033C34.827 6.73744 34.827 6.26256 34.5341 5.96967L29.7611 1.1967C29.4683 0.903806 28.9934 0.903806 28.7005 1.1967C28.4076 1.48959 28.4076 1.96447 28.7005 2.25736L32.9431 6.5L28.7005 10.7426C28.4076 11.0355 28.4076 11.5104 28.7005 11.8033C28.9934 12.0962 29.4683 12.0962 29.7611 11.8033L34.5341 7.03033ZM1 7.25H34.0038V5.75H1V7.25Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="needs">
+            <div class="container">
+              <div class="d-flex">
+                <div class="texts">
+                  <h2>
+                    Necessidades únicas,
+                    <br />
+                    projeto único:
+                  </h2>
+                  <p>
+                    Cada projeto é único, por isso que nossas soluções
+                    personalizadas são projetadas para você.
+                  </p>
+                  <a
+                    href="https://api.whatsapp.com/send?phone=553391448945&text=Ol%C3%A1%2C%20vi%20seu%20site%20e%20quero%20vender%20mais!"
+                    target="_blank"
+                  >
+                    <button class="btn btn-blue">
+                      Quero vender mais
+                      <svg
+                        width="35"
+                        height="13"
+                        viewBox="0 0 35 13"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="mar-s-3"
+                      >
+                        <path
+                          d="M1 5.75C0.585786 5.75 0.25 6.08579 0.25 6.5C0.25 6.91421 0.585786 7.25 1 7.25V5.75ZM34.5341 7.03033C34.827 6.73744 34.827 6.26256 34.5341 5.96967L29.7611 1.1967C29.4683 0.903806 28.9934 0.903806 28.7005 1.1967C28.4076 1.48959 28.4076 1.96447 28.7005 2.25736L32.9431 6.5L28.7005 10.7426C28.4076 11.0355 28.4076 11.5104 28.7005 11.8033C28.9934 12.0962 29.4683 12.0962 29.7611 11.8033L34.5341 7.03033ZM1 7.25H34.0038V5.75H1V7.25Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </button>
+                  </a>
+                </div>
+                <img src="assets/img/home-needs.png" alt="" />
+              </div>
+            </div>
+          </section>
+          <section id="communication">
+            <div class="container">
+              <h2>Boa comunicação e Transparência:</h2>
+              <p class="text-desktop">
+                Nosso compromisso com a comunicação clara e transparente
+                significa que você sempre estará informado sobre o progresso do
+                seu projeto.
+              </p>
+              <p class="text-mobile">
+                Você sempre estará informado sobre o progresso do seu projeto.
+              </p>
+              <img src="assets/img/image-communication.png" alt="" />
+            </div>
+          </section>
+        </section>
+
+        <section id="portfolio">
+          <section id="projects">
+            <div class="container">
+              <h2>Conheça nossos trabalhos:</h2>
+              <p>Veja nossos trabalhos anteriores.</p>
+              <div class="d-flex justify-content-between project-line-1">
+                <img
+                  src="assets/img/project-1.png"
+                  class="img-fluid project-1"
+                  alt=""
+                />
+                <img
+                  src="assets/img/project-2.png"
+                  class="img-fluid project-2"
+                  alt=""
+                />
+              </div>
+              <div class="d-flex justify-content-between project-line-2">
+                <img
+                  src="assets/img/project-3.png"
+                  class="img-fluid project-3"
+                  alt=""
+                />
+                <a href="https://www.lbltorneamentos.com/">
+                  <img
+                    src="assets/img/project-4.png"
+                    class="img-fluid project-4"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div class="mobile-projects">
+                <img
+                  src="assets/img/project-mobile-1.png"
+                  class="img-fluid project-4"
+                  alt=""
+                />
+                <img
+                  src="assets/img/project-mobile-2.png"
+                  class="img-fluid project-4"
+                  alt=""
+                />
+                <a href="https://www.lbltorneamentos.com/" target="_blank">
+                  <img
+                    src="assets/img/project-mobile-3.png"
+                    class="img-fluid project-4"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+          </section>
+          <section id="payment">
+            <div class="container">
+              <h2>
+                <span>Não se preocupe</span>
+                com a forma de
+                <br />
+                pagamento
+              </h2>
+              <p>
+                Nós oferecemos preços competitivos e justos para atender às suas
+                necessidades.
+              </p>
+              <div class="payment-wrapper">
+                <img
+                  src="assets/img/payment-method-cartao.png"
+                  class="img-fluid payment-card"
+                  alt=""
+                />
+                <img
+                  src="assets/img/payment-method-boleto.png"
+                  class="img-fluid boleto"
+                  alt=""
+                />
+                <img
+                  src="assets/img/payment-method-pix.png"
+                  class="img-fluid pix"
+                  alt=""
+                />
+              </div>
+              <div class="d-flex justify-content-center mar-t-12">
+                <a
+                  href="https://api.whatsapp.com/send?phone=553391448945&text=Ol%C3%A1%2C%20vi%20seu%20site%20e%20quero%20vender%20mais!"
+                  target="_blank"
+                >
+                  <button class="btn btn-blue">
+                    Quero vender mais
+                    <svg
+                      width="35"
+                      height="13"
+                      viewBox="0 0 35 13"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="mar-s-3"
+                    >
+                      <path
+                        d="M1 5.75C0.585786 5.75 0.25 6.08579 0.25 6.5C0.25 6.91421 0.585786 7.25 1 7.25V5.75ZM34.5341 7.03033C34.827 6.73744 34.827 6.26256 34.5341 5.96967L29.7611 1.1967C29.4683 0.903806 28.9934 0.903806 28.7005 1.1967C28.4076 1.48959 28.4076 1.96447 28.7005 2.25736L32.9431 6.5L28.7005 10.7426C28.4076 11.0355 28.4076 11.5104 28.7005 11.8033C28.9934 12.0962 29.4683 12.0962 29.7611 11.8033L34.5341 7.03033ZM1 7.25H34.0038V5.75H1V7.25Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </button>
+                </a>
+              </div>
+            </div>
+          </section>
+          <section id="team">
+            <div class="container">
+              <div class="d-flex justify-content-between">
+                <div class="texts">
+                  <h2>Conheça nossa equipe</h2>
+                  <p id="text-team">
+                    Olá, sou Lorrainy, uma apaixonada por design de <br />
+                    experiência do usuário (UX) e design de interface do <br />
+                    usuário (UI). Estou entusiasmada em compartilhar <br />
+                    meu trabalho com você!
+                  </p>
+                </div>
+                <div class="image">
+                  <img
+                    src="assets/img/team-1.png"
+                    id="img-team"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <section id="banner">
+          <div class="container">
+            <div class="card-banner">
+              <h2>Quer ser mais presente digitalmente?</h2>
+              <p class="text-desktop">
+                Aumente significativamente o seu alcance para além das
+                fronteiras geográficas da sua empresa, conquistando a confiança
+                dos seus clientes e fortalecendo a sua marca de maneira
+                consistente.
+              </p>
+              <p class="text-mobile">
+                Conquiste a confiança dos seus clientes e fortalecendo a sua
+                marca
+              </p>
+              <a
+                href="https://api.whatsapp.com/send?phone=553391448945&text=Ol%C3%A1%2C%20vi%20seu%20site%20e%20quero%20vender%20mais!"
+                target="_blank"
+              >
+                <button class="btn btn-green">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M25.3999 6.54658C24.1775 5.31182 22.7215 4.33281 21.1168 3.66665C19.5121 3.0005 17.7908 2.66053 16.0533 2.66658C8.77328 2.66658 2.83994 8.59992 2.83994 15.8799C2.83994 18.2132 3.45328 20.4799 4.59994 22.4799L2.73328 29.3333L9.73328 27.4933C11.6666 28.5466 13.8399 29.1066 16.0533 29.1066C23.3333 29.1066 29.2666 23.1733 29.2666 15.8932C29.2666 12.3599 27.8933 9.03992 25.3999 6.54658ZM16.0533 26.8666C14.0799 26.8666 12.1466 26.3333 10.4533 25.3333L10.0533 25.0932L5.89328 26.1866L6.99994 22.1333L6.73328 21.7199C5.63694 19.9692 5.0548 17.9456 5.05328 15.8799C5.05328 9.82658 9.98661 4.89325 16.0399 4.89325C18.9733 4.89325 21.7333 6.03992 23.7999 8.11992C24.8233 9.13853 25.6342 10.3501 26.1858 11.6845C26.7374 13.0188 27.0187 14.4494 27.0133 15.8932C27.0399 21.9466 22.1066 26.8666 16.0533 26.8666ZM22.0799 18.6532C21.7466 18.4932 20.1199 17.6933 19.8266 17.5733C19.5199 17.4666 19.3066 17.4133 19.0799 17.7333C18.8533 18.0666 18.2266 18.8133 18.0399 19.0266C17.8533 19.2533 17.6533 19.2799 17.3199 19.1066C16.9866 18.9466 15.9199 18.5866 14.6666 17.4666C13.6799 16.5866 13.0266 15.5066 12.8266 15.1732C12.6399 14.8399 12.7999 14.6666 12.9733 14.4932C13.1199 14.3466 13.3066 14.1066 13.4666 13.9199C13.6266 13.7332 13.6933 13.5866 13.7999 13.3732C13.9066 13.1466 13.8533 12.9599 13.7733 12.7999C13.6933 12.6399 13.0266 11.0133 12.7599 10.3466C12.4933 9.70658 12.2133 9.78658 12.0133 9.77325H11.3733C11.1466 9.77325 10.7999 9.85325 10.4933 10.1866C10.1999 10.5199 9.34661 11.3199 9.34661 12.9466C9.34661 14.5733 10.5333 16.1466 10.6933 16.3599C10.8533 16.5866 13.0266 19.9199 16.3333 21.3466C17.1199 21.6933 17.7333 21.8933 18.2133 22.0399C18.9999 22.2933 19.7199 22.2532 20.2933 22.1732C20.9333 22.0799 22.2533 21.3732 22.5199 20.5999C22.7999 19.8266 22.7999 19.1733 22.7066 19.0266C22.6133 18.8799 22.4133 18.8132 22.0799 18.6532Z"
+                      fill="#FAFBFF"
+                    />
+                  </svg>
+                  whatsapp
+                </button>
+              </a>
+            </div>
+          </div>
+        </section>
+        <!--         <section id="blog" x-data="getBlogPosts()">
+          <div class="container">
+            <div
+              class="d-flex align-items-center justify-content-center flex-column"
+            >
+              <h2 class="mar-b-7">Principais notícias</h2>
+              <p>
+                Fique por dentro das principais notícias no mundo da energia
+                solar.
+              </p>
+              <div
+                class="d-flex blog-cards justify-content-center flex-wrap flex-row"
+              >
+                <template x-for="post in blogPosts" :key="post.id">
+                  <a :href="post.href" target="_blank">
+                    <div class="card" :style="post.backgroundImg">
+                      <div class="card-body">
+                        <div
+                          class="custom-badge-blog mar-b-5"
+                          :class="post.badge"
+                          x-text="post.badge"
+                        >
+                          Blog
+                        </div>
+                        <h4 x-text="post.title"></h4>
+                      </div>
+                    </div>
+                  </a>
+                </template>
+              </div>
+              <a class="" href="#">
+                <a
+                  href="https://www.byd.com.br/noticias/"
+                  class=""
+                  target="_blank"
+                >
+                  <button class="btn btn-blue-light">Conferir Notícias</button>
+                </a>
+              </a>
+            </div>
+          </div>
+        </section> -->
+      </main>
+      <footer id="footer">
         <div class="container">
-            <h2>Oferecemos mais que desenvolvimento de site.</h2>
-            <p>
-                Construímos projetos exclusivos, planejados por profissionais para atender suas necessidades, trabalhamos com as melhores tecnologias.
-            </p>
+          <div class="footer-content d-flex justify-content-between">
+            <div>
+              <img
+                src="assets/img/logo-white.svg"
+                alt="logo CodesDevs branca"
+              />
+            </div>
+            <ul class="about">
+              <li class="mar-b-5">
+                <h5 class="nav">Barra de navegação</h5>
+              </li>
+              <li class="mar-b-5">
+                <a href="#home">
+                  <span class="home">Início</span>
+                </a>
+              </li>
+              <li class="mar-b-5">
+                <a href="#services">
+                  <span class="services">Serviços</span>
+                </a>
+              </li>
+              <li class="mar-b-5">
+                <a href="#portfolio">
+                  <span class="portfolio">Portfólio</span>
+                </a>
+              </li>
+              <li class="mar-b-5">
+                <a href="#banner">
+                  <span class="contact">Contato</span>
+                </a>
+              </li>
+            </ul>
+            <ul class="contacts">
+              <li class="mar-b-5">
+                <h5 class="contact">Contatos</h5>
+              </li>
+              <li class="mar-b-5">
+                <span class="phone">Telefone: +55 (33) 9 9144-8945</span>
+              </li>
+              <li class="mar-b-5">
+                <span class="email">Email: codesdevs@gmail.com </span>
+              </li>
+            </ul>
+            <div class="social d-flex flex-column align-items-start">
+              <h5 class="about">Redes Sociais</h5>
+              <ul class="d-flex mar-t-3">
+                <li class="mar-e-2">
+                  <a
+                    href="https://www.instagram.com/codes_devs/"
+                    target="_blank"
+                    ><img src="assets/img/instagram.svg" alt=""
+                  /></a>
+                </li>
+                <li class="mar-e-2">
+                  <a href="https://www.tiktok.com/@codesdevs3" target="_blank"
+                    ><img src="assets/img/tiktok.svg" alt=""
+                  /></a>
+                </li>
+                <li class="mar-e-2">
+                  <a href="https://br.pinterest.com/codesdevs/" target="_blank"
+                    ><img src="assets/img/pint.svg" alt=""
+                  /></a>
+                </li>
+                <li class="mar-e-2">
+                  <a
+                    href="https://www.facebook.com/codesdevsgroup"
+                    target="_blank"
+                    ><img src="assets/img/face.svg" alt=""
+                  /></a>
+                </li>
+                <li class="mar-e-2">
+                  <a
+                    href="https://www.behance.net/codesdevsgroup/moodboards"
+                    target="_blank"
+                    ><img src="assets/img/beha.svg" alt=""
+                  /></a>
+                </li>
+                <li class="mar-e-2">
+                  <a
+                    href="https://www.linkedin.com/company/codes-devs/about/"
+                    target="_blank"
+                    ><img src="assets/img/linkedin.svg" alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    href="https://api.whatsapp.com/send?phone=553391448945&text=Ol%C3%A1%2C%20vi%20seu%20site%20e%20quero%20vender%20mais!"
+                    target="_blank"
+                    ><img src="assets/img/whats.svg" alt=""
+                  /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="baseboard text-center pad-y-7">
+            <span> © Copyright 2023 CodesDevs. All rights reserved </span>
+          </div>
         </div>
-    </section>
-
-    <section id="help">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-6 help_text">
-                    <h2>Veja como podemos ajudar</h2>
-                    <p>
-                        Entenda o que componhe os processos de Desenvolvimentos de Site e Sistemas na Codes Devs:
-                    </p>
-                    <button type="button" class="btn btn_pattern btn_pattern_second">Quero um projeto!</button>
-                </div>
-                <div class="col-12 col-md-6 help_cards">
-                    <div class="row d-flex justify-content-center">
-                        <div class="help_card">
-                            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M37.3334 39.6667H15.1667M49.0001 21V9.375C49.0001 8.06332 47.9368 7 46.6251 7H7.04175C5.73007 7 4.66675 8.06332 4.66675 9.375V35M49.0001 21H51.2917C52.6034 21 53.6667 22.0633 53.6667 23.375V45.5M49.0001 21H39.7084C38.3967 21 37.3334 22.0633 37.3334 23.375V35M37.3334 45.5V49M37.3334 45.5V35M37.3334 45.5H45.5001H53.6667M53.6667 45.5V48.9583C53.6667 50.27 52.6034 51.3333 51.2917 51.3333H39.6667C38.3781 51.3333 37.3334 50.2887 37.3334 49V49M4.66675 35V37.2917C4.66675 38.6033 5.73007 39.6667 7.04175 39.6667H15.1667M4.66675 35H37.3334M15.1667 39.6667L12.8701 45.7911C12.2878 47.3437 13.4356 49 15.0939 49H37.3334" stroke="white" stroke-width="2"/>
-                                <circle cx="45.4999" cy="47.8334" r="1.16667" fill="#FCF8F8"/>
-                            </svg>
-                            <h5>Site Responsivo</h5>
-                            <p>
-                                Seu site é preparado para dispositivos móveis e web.
-                            </p>
-                        </div>
-    
-                        <div class="help_card">
-                            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19.5151 32.1481L23.6587 35.5244C24.8046 36.4581 24.8046 38.2085 23.6587 39.1422L19.5151 42.5185M46.2423 49V39.9259M46.2423 39.9259L41.1514 42.5185M46.2423 39.9259L51.3333 42.5185M38.9999 32.6666H46.6666C47.9552 32.6666 48.9999 31.622 48.9999 30.3333V17.1111M48.9999 17.1111V11.6666C48.9999 10.378 47.9552 9.33331 46.6666 9.33331H16.3333C15.0446 9.33331 13.9999 10.378 13.9999 11.6666V17.1111M48.9999 17.1111H13.9999M13.9999 22.2963V17.1111M9.33325 28V46.6666C9.33325 47.9553 10.3779 49 11.6666 49H32.4545C33.7431 49 34.7878 47.9553 34.7878 46.6666V28C34.7878 26.7113 33.7431 25.6666 32.4545 25.6666H11.6666C10.3779 25.6666 9.33325 26.7113 9.33325 28Z" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                            </svg>   
-                            <h5>Projeto Exclusivo</h5>
-                            <p>
-                                Design e programação feitos unicamente para você.
-                            </p>
-                        </div>
-    
-                        <div class="help_card">
-                            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M23.3333 13.6316H9.21053C7.98969 13.6316 7 14.6213 7 15.8421V22.4737M49 34.6316V46.7895C49 48.0103 48.0103 49 46.7895 49H9.21053C7.98969 49 7 48.0103 7 46.7895V22.4737M7 22.4737H22.1667M22.1667 31.3158L17.5 35.7368L21 39.0526M29.1667 31.3158L26.8333 40.1579M32.6667 31.3158L37.3333 35.7368L32.6667 40.1579M43.4737 25.7895L49 31.3158M46.7895 16.9474C46.7895 22.4411 42.3359 26.8947 36.8421 26.8947C31.3483 26.8947 26.8947 22.4411 26.8947 16.9474C26.8947 11.4536 31.3483 7 36.8421 7C42.3359 7 46.7895 11.4536 46.7895 16.9474Z" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-                            <h5>Otimização SEO</h5>
-                            <p>
-                                Seu site entre os primeiros nos mecanismos de busca.
-                            </p>
-                        </div>
-    
-                        <div class="help_card">
-                            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M14 14H8C7.44772 14 7 14.4477 7 15V38.6666C7 39.2189 7.44772 39.6666 8 39.6666H14M14 14V39.6666M14 14V10.3333C14 9.78103 14.4477 9.33331 15 9.33331H35.1667C35.719 9.33331 36.1667 9.78103 36.1667 10.3333V14M14 39.6666V41C14 41.5523 14.4477 42 15 42H30.3333M36.1667 14V32.6666M36.1667 14H42.1667C42.719 14 43.1667 14.4477 43.1667 15V36.1666M19.8333 30.3333H24.5M18.6667 24.5H30.3333M18.6667 18.6666H31.5M41.4167 45.5L37.3333 49L32.6667 37.3333L45.5 42L41.4167 45.5ZM41.4167 45.5L44.3333 49" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                            </svg>                                
-                            <h5>Cross-browser</h5>
-                            <p>
-                                Seus site funcionando em qualquer navegador.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+      </footer>
+      <div class="cookie-consent d-none">
+        <div class="container-fluid">
+          <div>
+            <span class="mar-e-8">
+              Utilizamos cookies próprios e de terceiros para otimizar
+              funcionalidades do site, aprimorar e personalizar a experiência do
+              usuário, personalizar conteúdo e anúncios e fornecer mídia social
+              e outros recursos de terceiros.
+              <a href="./privacy.html" class="ml-1 text-decoration-none"
+                >Política de Privacidade</a
+              >
+            </span>
+            <div class="d-flex align-items-center justify-content-center g-2">
+              <button class="btn btn-transp mar-e-5" onclick="rejectCookies()">
+                Rejeitar
+              </button>
+              <button class="btn btn-blue" onclick="acceptCookies()">
+                Aceitar
+              </button>
             </div>
+          </div>
         </div>
-    </section>
-
-    <section id="jobs">
-        <div class="container">
-            <div class="d-md-flex flex-row">
-                <h2>Conheça nosso trabalho</h2>
-                <p>
-                    Confira os projetos  feitos exclusivamente para empresas dos nossos clientes.
-                </p>
-            </div>
-        </div>
-        
-        <div class="owl-carousel owl-theme portfolio justify-content-center">
-            <div class="item portfolio_card">
-                <div class="portfolio_card_pattern">
-                    <img src="./assets/img/petyk-logo.jpg" alt="">
-                </div>
-            </div>
-
-            <div class="item portfolio_card">
-                <div class="portfolio_card_pattern">
-                    <img src="./assets/img/mensurar-logo.jpg" alt="">
-                </div>
-            </div>
-
-            <div class="item portfolio_card">
-                <div class="portfolio_card_pattern">
-                    <img src="./assets/img/lemos-contabilidade-logo.jpg" alt="">
-                </div>
-            </div>
-
-            <div class="item portfolio_card">
-                <div class="portfolio_card_pattern">
-                    <img src="" alt="">
-                </div>
-            </div>
-
-            <div class="item portfolio_card">
-                <div class="portfolio_card_pattern">
-                    <img src="" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="feedback">
-        
-        <div class="container">
-            <h2>O que nos clientes dizem sobre nós</h2>
-            <div class="owl-carousel owl-theme feedback">
-                <div class="item feedback_element">
-                    <div class="feedback_img_wrapper">
-                        <img src="./assets/img/perfil-feedback1.png" alt="">
-                    </div>
-                    <div class="feedback_text_wrapper">
-                        <h3>
-                        "Não poderia ter ficado mais feliz com o resultado, entenderam nossas necessidades e entregaram mais do sonhamos."
-                        </h3>
-                        <h5>Carlos Silva</h5>
-                        <span>Seo de BM</span>
-                    </div>
-                </div>
-    
-                <div class="item feedback_element">
-                    <div class="feedback_img_wrapper">
-                        <img src="./assets/img/perfil-feedback1.png" alt="">
-                    </div>
-                    <div class="feedback_text_wrapper">
-                        <h3>
-                            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic fugit itaque consectetur excepturi ab facere rerum nulla repellendus, esse iste sed labore, officia, impedit sint expedita officiis dolor modi deleniti."
-                        </h3>
-                        <h5>John Doe</h5>
-                        <span>CEO de JM</span>
-                    </div>
-                </div>
-    
-                <div class="item feedback_element">
-                    <div class="feedback_img_wrapper">
-                        <img src="./assets/img/perfil-feedback1.png" alt="">
-                    </div>
-                    <div class="feedback_text_wrapper">
-                        <h3>
-                            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic fugit itaque consectetur excepturi ab facere rerum nulla repellendus, esse iste sed labore, officia, impedit sint expedita."
-                        </h3>
-                        <h5>Fulano da Silva</h5>
-                        <span>CTO da Google</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="group">
-
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 align-self-center">
-                    <h2>Nossa equipe <br> de desenvolvimento</h2>
-                </div>
-                
-                <div class="col-md-6">
-                    <div class="owl-carousel owl-theme group">
-                        <div class="item group_element">
-                            <div class="partner d-flex flex-column align-items-center">
-                                <img src="./assets/img/perfil-group1.png" alt="">
-                                <h5>Fabiano</h5>
-                                <span>Progamador</span>
-                            </div>
-                        </div>
-            
-                        <div class="item group_element">
-                            <div class="partner d-flex flex-column align-items-center">
-                                <img src="./assets/img/perfil-group2.png" alt="">
-                                <h5>Lucas</h5>
-                                <span>Progamador</span>
-                            </div>
-                        </div>
-            
-                        <div class="item group_element">
-                            <div class="partner d-flex flex-column align-items-center">
-                                <img src="./assets/img/perfil-group3.png" alt="">
-                                <h5>Alef</h5>
-                                <span>Progamador</span>
-                            </div>
-                        </div>
-
-                        <div class="item group_element">
-                            <div class="partner d-flex flex-column align-items-center">
-                                <img src="./assets/img/perfil-group3.png" alt="">
-                                <h5>Lorrainy</h5>
-                                <span>Designer</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-    <section id="banner2">
-        <div class="container text-center">
-            <h2>Interessado em fazer um site com a gente?</h2>
-            <h2>Vamos conversar!</h2>
-            <button type="button" class="btn btn_pattern btn_pattern_second">iniciar projeto!</button>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 col-12 contact">
-                    <h4>Entre em contato</h4>
-                    <p>Telefone: (33) 99144-8945</p>
-                    <p>Email: codesdevs@gmail.com</p>
-                    <img src="./assets/img/logo.webp" alt="">
-                </div>
-
-                <div class="col-md-4 col-12 social">
-                    <h4>Rede sociais</h4>
-                    <ul class="d-flex ps-0 mt-3">
-                        <li class="me-3"><a href="https://www.instagram.com/codesdevsgroup/"><img src="./assets/img/logo_instagram.png" alt=""></a></li>
-                        <li class="me-3"><a href="https://www.facebook.com/codesdevsgroup/"><img src="./assets/img/logo_facebook.png" alt=""></a></li>
-                        <li class="me-3"><a href="https://www.linkedin.com/codesdevsgroup"><img src="./assets/img/logo_linkedin.png" alt=""></a></li>
-                        <li class="me-3"><a href="https://github.com/codesdevsgroup"><img src="./assets/img/logo_github.png" alt=""></a></li>
-                    </ul>
-                </div>
-
-                <div class="col-md-4 col-12 site-map">
-                    <h4>Guia de Navegação</h4>
-                    <ul class="ps-0">
-                        <li><a href="#home">Início</a></li>
-                        <li><a href="#help">Serviços</a></li>
-                        <li><a href="#jobs">Portfólio</a></li>
-                        <li><a href="#feedback">Clientes</a></li>
-                        <li><a href="#group">Colaboradores</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-        crossorigin="anonymous"></script>
-
-    <script src="./assets/js/jquery.min.js"></script>
+      </div>
+    </div>
+    <script src="./assets/js/jquery-3.6.1.min.js"></script>
     <script src="./assets/js/main.js"></script>
-    <script src="./lib/owlCarousel/dist/owl.carousel.min.js"></script>
-
-</body>
-
+    <script src="./assets/js/effects.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+  </body>
 </html>
